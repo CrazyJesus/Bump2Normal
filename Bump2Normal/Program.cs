@@ -13,5 +13,10 @@ namespace Bump2Normal
             ApplicationConfiguration.Initialize();
             Application.Run(new Bump2Normal());
         }
+
+        static void ConvertFIle(string file)
+        {
+            
+        }
     }
 }
