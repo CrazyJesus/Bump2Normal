@@ -16,5 +16,34 @@ namespace Bump2Normal
         {
             InitializeComponent();
         }
+
+        public PictureBox GetPictureAs()
+        {
+            return PreviewTextureBoxAS;
+        }
+
+        public void SetImageAS(Bitmap image)
+        {
+            PreviewTextureBoxAS.Image = image;
+        }
+        public void SetImageSMDI(Bitmap image)
+        {
+            PreviewTextureBoxSMDI.Image = image;
+        }
+        public void SetImageNormal(Bitmap image)
+        {
+            PreviewTextureBoxNormal.Image = image;
+        }
+
+        public void SetLabelSize(int width, int height)
+        {
+            widthLabel.Text = widthLabel.Text.Replace("%width%", width.ToString());
+            heightLabel.Text = heightLabel.Text.Replace("%height%", height.ToString());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

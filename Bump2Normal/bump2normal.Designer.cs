@@ -37,7 +37,20 @@
             Bump2Path = new TextBox();
             label2 = new Label();
             BrowseBump2BTN = new Button();
-            CreateAsBTN = new Button();
+            CreateSMDIBTN = new Button();
+            CreateASBTN = new Button();
+            CreateNormalBTN = new Button();
+            PreviewTexturesBTN = new Button();
+            label3 = new Label();
+            label4 = new Label();
+            heightBox = new TextBox();
+            widthBox = new TextBox();
+            heightLabel = new Label();
+            widthLabel = new Label();
+            CreatePrefixCheckBox = new CheckBox();
+            FileNameTextbox = new TextBox();
+            label5 = new Label();
+            CreateAllTexturesBTN = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -46,7 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(12, 5);
+            label1.Location = new Point(8, 27);
             label1.Name = "label1";
             label1.Size = new Size(119, 15);
             label1.TabIndex = 1;
@@ -54,7 +67,7 @@
             // 
             // Bump1Path
             // 
-            Bump1Path.Location = new Point(12, 23);
+            Bump1Path.Location = new Point(8, 45);
             Bump1Path.Name = "Bump1Path";
             Bump1Path.Size = new Size(253, 23);
             Bump1Path.TabIndex = 2;
@@ -63,7 +76,7 @@
             // BrowseBump1BTN
             // 
             BrowseBump1BTN.ForeColor = Color.Black;
-            BrowseBump1BTN.Location = new Point(271, 23);
+            BrowseBump1BTN.Location = new Point(267, 45);
             BrowseBump1BTN.Name = "BrowseBump1BTN";
             BrowseBump1BTN.Size = new Size(75, 23);
             BrowseBump1BTN.TabIndex = 3;
@@ -74,7 +87,7 @@
             // pictureBox2
             // 
             pictureBox2.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox2.Location = new Point(638, 12);
+            pictureBox2.Location = new Point(620, 34);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(230, 243);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -84,7 +97,7 @@
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(352, 12);
+            pictureBox1.Location = new Point(360, 34);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(230, 243);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -93,7 +106,7 @@
             // 
             // Bump2Path
             // 
-            Bump2Path.Location = new Point(12, 71);
+            Bump2Path.Location = new Point(8, 93);
             Bump2Path.Name = "Bump2Path";
             Bump2Path.Size = new Size(253, 23);
             Bump2Path.TabIndex = 6;
@@ -102,7 +115,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(15, 52);
+            label2.Location = new Point(11, 74);
             label2.Name = "label2";
             label2.Size = new Size(126, 15);
             label2.TabIndex = 7;
@@ -111,7 +124,7 @@
             // BrowseBump2BTN
             // 
             BrowseBump2BTN.ForeColor = Color.Black;
-            BrowseBump2BTN.Location = new Point(271, 71);
+            BrowseBump2BTN.Location = new Point(267, 93);
             BrowseBump2BTN.Name = "BrowseBump2BTN";
             BrowseBump2BTN.Size = new Size(75, 23);
             BrowseBump2BTN.TabIndex = 8;
@@ -119,16 +132,141 @@
             BrowseBump2BTN.UseVisualStyleBackColor = true;
             BrowseBump2BTN.Click += BrowseBump2BTN_Click;
             // 
-            // CreateAsBTN
+            // CreateSMDIBTN
             // 
-            CreateAsBTN.Enabled = false;
-            CreateAsBTN.Location = new Point(15, 181);
-            CreateAsBTN.Name = "CreateAsBTN";
-            CreateAsBTN.Size = new Size(115, 24);
-            CreateAsBTN.TabIndex = 9;
-            CreateAsBTN.Text = "Create AS map";
-            CreateAsBTN.UseVisualStyleBackColor = true;
-            CreateAsBTN.Click += CreateAsBTN_Click;
+            CreateSMDIBTN.Enabled = false;
+            CreateSMDIBTN.Location = new Point(8, 160);
+            CreateSMDIBTN.Name = "CreateSMDIBTN";
+            CreateSMDIBTN.Size = new Size(125, 24);
+            CreateSMDIBTN.TabIndex = 9;
+            CreateSMDIBTN.Text = "Create SMDI map";
+            CreateSMDIBTN.UseVisualStyleBackColor = true;
+            CreateSMDIBTN.Click += CreateSMDIBTN_Click;
+            // 
+            // CreateASBTN
+            // 
+            CreateASBTN.Enabled = false;
+            CreateASBTN.Location = new Point(8, 130);
+            CreateASBTN.Name = "CreateASBTN";
+            CreateASBTN.Size = new Size(125, 24);
+            CreateASBTN.TabIndex = 10;
+            CreateASBTN.Text = "Create AS map";
+            CreateASBTN.UseVisualStyleBackColor = true;
+            CreateASBTN.Click += CreateAsBTN_Click_1;
+            // 
+            // CreateNormalBTN
+            // 
+            CreateNormalBTN.Enabled = false;
+            CreateNormalBTN.Location = new Point(8, 190);
+            CreateNormalBTN.Name = "CreateNormalBTN";
+            CreateNormalBTN.Size = new Size(125, 24);
+            CreateNormalBTN.TabIndex = 11;
+            CreateNormalBTN.Text = "Create Normal map";
+            CreateNormalBTN.UseVisualStyleBackColor = true;
+            CreateNormalBTN.Click += CreateNormalBTN_Click;
+            // 
+            // PreviewTexturesBTN
+            // 
+            PreviewTexturesBTN.Enabled = false;
+            PreviewTexturesBTN.Location = new Point(8, 249);
+            PreviewTexturesBTN.Name = "PreviewTexturesBTN";
+            PreviewTexturesBTN.Size = new Size(125, 24);
+            PreviewTexturesBTN.TabIndex = 12;
+            PreviewTexturesBTN.Text = "Preview Textures";
+            PreviewTexturesBTN.UseVisualStyleBackColor = true;
+            PreviewTexturesBTN.Click += PreviewTexturesBTN_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(450, 16);
+            label3.Name = "label3";
+            label3.Size = new Size(39, 15);
+            label3.TabIndex = 13;
+            label3.Text = "bump";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(717, 16);
+            label4.Name = "label4";
+            label4.Size = new Size(46, 15);
+            label4.TabIndex = 14;
+            label4.Text = "bump#";
+            // 
+            // heightBox
+            // 
+            heightBox.Location = new Point(236, 144);
+            heightBox.Name = "heightBox";
+            heightBox.Size = new Size(71, 23);
+            heightBox.TabIndex = 15;
+            heightBox.KeyPress += textBox1_KeyPress;
+            // 
+            // widthBox
+            // 
+            widthBox.Location = new Point(160, 144);
+            widthBox.Name = "widthBox";
+            widthBox.Size = new Size(70, 23);
+            widthBox.TabIndex = 16;
+            widthBox.KeyPress += textBox2_KeyPress;
+            // 
+            // heightLabel
+            // 
+            heightLabel.AutoSize = true;
+            heightLabel.Location = new Point(248, 126);
+            heightLabel.Name = "heightLabel";
+            heightLabel.Size = new Size(41, 15);
+            heightLabel.TabIndex = 17;
+            heightLabel.Text = "height";
+            // 
+            // widthLabel
+            // 
+            widthLabel.AutoSize = true;
+            widthLabel.Location = new Point(174, 126);
+            widthLabel.Name = "widthLabel";
+            widthLabel.Size = new Size(37, 15);
+            widthLabel.TabIndex = 18;
+            widthLabel.Text = "width";
+            // 
+            // CreatePrefixCheckBox
+            // 
+            CreatePrefixCheckBox.AutoSize = true;
+            CreatePrefixCheckBox.Checked = true;
+            CreatePrefixCheckBox.CheckState = CheckState.Checked;
+            CreatePrefixCheckBox.Location = new Point(160, 173);
+            CreatePrefixCheckBox.Name = "CreatePrefixCheckBox";
+            CreatePrefixCheckBox.Size = new Size(93, 19);
+            CreatePrefixCheckBox.TabIndex = 19;
+            CreatePrefixCheckBox.Text = "Create Prefix";
+            CreatePrefixCheckBox.UseVisualStyleBackColor = true;
+            CreatePrefixCheckBox.CheckedChanged += CreatePrefixCheckBox_CheckedChanged;
+            // 
+            // FileNameTextbox
+            // 
+            FileNameTextbox.Location = new Point(160, 220);
+            FileNameTextbox.Name = "FileNameTextbox";
+            FileNameTextbox.Size = new Size(182, 23);
+            FileNameTextbox.TabIndex = 20;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(215, 202);
+            label5.Name = "label5";
+            label5.Size = new Size(58, 15);
+            label5.TabIndex = 21;
+            label5.Text = "File name";
+            // 
+            // CreateAllTexturesBTN
+            // 
+            CreateAllTexturesBTN.Enabled = false;
+            CreateAllTexturesBTN.Location = new Point(8, 220);
+            CreateAllTexturesBTN.Name = "CreateAllTexturesBTN";
+            CreateAllTexturesBTN.Size = new Size(125, 23);
+            CreateAllTexturesBTN.TabIndex = 22;
+            CreateAllTexturesBTN.Text = "Create all textures";
+            CreateAllTexturesBTN.UseVisualStyleBackColor = true;
+            CreateAllTexturesBTN.Click += CreateAllTexturesBTN_Click;
             // 
             // Bump2Normal
             // 
@@ -137,8 +275,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(880, 267);
-            Controls.Add(CreateAsBTN);
+            ClientSize = new Size(880, 287);
+            Controls.Add(CreateAllTexturesBTN);
+            Controls.Add(label5);
+            Controls.Add(FileNameTextbox);
+            Controls.Add(CreatePrefixCheckBox);
+            Controls.Add(widthLabel);
+            Controls.Add(heightLabel);
+            Controls.Add(widthBox);
+            Controls.Add(heightBox);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(PreviewTexturesBTN);
+            Controls.Add(CreateNormalBTN);
+            Controls.Add(CreateASBTN);
+            Controls.Add(CreateSMDIBTN);
             Controls.Add(BrowseBump2BTN);
             Controls.Add(label2);
             Controls.Add(Bump2Path);
@@ -168,6 +319,19 @@
         private TextBox Bump2Path;
         private Label label2;
         private Button BrowseBump2BTN;
-        private Button CreateAsBTN;
+        private Button CreateSMDIBTN;
+        private Button CreateASBTN;
+        private Button CreateNormalBTN;
+        private Button PreviewTexturesBTN;
+        private Label label3;
+        private Label label4;
+        private TextBox heightBox;
+        private TextBox widthBox;
+        private Label heightLabel;
+        private Label widthLabel;
+        private CheckBox CreatePrefixCheckBox;
+        private TextBox FileNameTextbox;
+        private Label label5;
+        private Button CreateAllTexturesBTN;
     }
 }

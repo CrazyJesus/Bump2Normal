@@ -38,6 +38,8 @@ namespace Bump2Normal
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            heightLabel = new Label();
+            widthLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)PreviewTextureBoxAS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PreviewTextureBoxSMDI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PreviewTextureBoxNormal).BeginInit();
@@ -45,41 +47,48 @@ namespace Bump2Normal
             // 
             // PreviewTextureBoxAS
             // 
+            PreviewTextureBoxAS.BorderStyle = BorderStyle.Fixed3D;
             PreviewTextureBoxAS.Location = new Point(11, 43);
             PreviewTextureBoxAS.Name = "PreviewTextureBoxAS";
             PreviewTextureBoxAS.Size = new Size(230, 243);
+            PreviewTextureBoxAS.SizeMode = PictureBoxSizeMode.StretchImage;
             PreviewTextureBoxAS.TabIndex = 0;
             PreviewTextureBoxAS.TabStop = false;
             // 
             // PreviewTextureBoxSMDI
             // 
+            PreviewTextureBoxSMDI.BorderStyle = BorderStyle.Fixed3D;
             PreviewTextureBoxSMDI.Location = new Point(247, 43);
             PreviewTextureBoxSMDI.Name = "PreviewTextureBoxSMDI";
             PreviewTextureBoxSMDI.Size = new Size(230, 243);
+            PreviewTextureBoxSMDI.SizeMode = PictureBoxSizeMode.StretchImage;
             PreviewTextureBoxSMDI.TabIndex = 1;
             PreviewTextureBoxSMDI.TabStop = false;
             // 
             // PreviewTextureBoxNormal
             // 
+            PreviewTextureBoxNormal.BorderStyle = BorderStyle.Fixed3D;
             PreviewTextureBoxNormal.Location = new Point(483, 43);
             PreviewTextureBoxNormal.Name = "PreviewTextureBoxNormal";
             PreviewTextureBoxNormal.Size = new Size(230, 243);
+            PreviewTextureBoxNormal.SizeMode = PictureBoxSizeMode.StretchImage;
             PreviewTextureBoxNormal.TabIndex = 2;
             PreviewTextureBoxNormal.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(96, 25);
+            label1.Location = new Point(34, 25);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
             label1.TabIndex = 3;
             label1.Text = "As map";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(328, 25);
+            label2.Location = new Point(276, 25);
             label2.Name = "label2";
             label2.Size = new Size(62, 15);
             label2.TabIndex = 4;
@@ -88,11 +97,29 @@ namespace Bump2Normal
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(565, 25);
+            label3.Location = new Point(509, 25);
             label3.Name = "label3";
             label3.Size = new Size(74, 15);
             label3.TabIndex = 5;
             label3.Text = "Normal map";
+            // 
+            // heightLabel
+            // 
+            heightLabel.AutoSize = true;
+            heightLabel.Location = new Point(366, 289);
+            heightLabel.Name = "heightLabel";
+            heightLabel.Size = new Size(101, 15);
+            heightLabel.TabIndex = 6;
+            heightLabel.Text = "height: %height%";
+            // 
+            // widthLabel
+            // 
+            widthLabel.AutoSize = true;
+            widthLabel.Location = new Point(267, 289);
+            widthLabel.Name = "widthLabel";
+            widthLabel.Size = new Size(93, 15);
+            widthLabel.TabIndex = 7;
+            widthLabel.Text = "width: %width%";
             // 
             // PreviewMaps
             // 
@@ -103,6 +130,8 @@ namespace Bump2Normal
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(725, 307);
+            Controls.Add(widthLabel);
+            Controls.Add(heightLabel);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -129,5 +158,7 @@ namespace Bump2Normal
         private Label label1;
         private Label label2;
         private Label label3;
+        private Label heightLabel;
+        private Label widthLabel;
     }
 }
