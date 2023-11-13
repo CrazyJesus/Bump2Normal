@@ -13,7 +13,7 @@ Bump
 
 Bump#
 
-![Bump#](https://i.imgur.com/tXkiQnM.png))
+![Bump#](https://i.imgur.com/tXkiQnM.png)
 
 
 ## output
