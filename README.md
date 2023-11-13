@@ -1,5 +1,7 @@
 # Bump2Normal
 This util convert bump texture, by stalker, in SMDI, AS, NOHQ for DayZ.  
+![https://i.imgur.com/WMFwhis.png](https://i.imgur.com/WMFwhis.png)
+
 # Example
 
 ## Input
